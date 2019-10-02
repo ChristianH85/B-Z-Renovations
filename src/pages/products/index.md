@@ -1,22 +1,24 @@
 ---
 templateKey: product-page
-title: Our Coffee
+title: Works in Progress
 image: /img/20190811_085838.jpg
-heading: Great coffee with a conscience
-description: >-
-  Kaldi is the ultimate spot for coffee lovers who want to learn about their
-  java’s origin and support the farmers that grew it. We take coffee production,
-  roasting and brewing seriously and we’re glad to pass that knowledge to
-  anyone.
+heading: '123 Somewhere ln Austin,TX 78741'
+description: charming description of what the house you are selling has to offer
 intro:
   blurbs:
-    - image: /img/coffee.png
-      text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+    - image: /img/img_3115.jpg
+      text: >-
+        Dog Not Included. Point is you can add whatever you want to this to sell
+        the properties along side an image. all of this can be added or deleted
+        in Admin. 
+    - image: /img/img_7649.jpg
+      text: >-
+        like this image. maybe its a summer kitchen maybe a hot tub or bar.
+        Anyhow You should delete these and replace. The slightly harder Part is
+        setting the font colors and formatting. that has to be done in code.
+        Also I can add new inputs or map capability but that will eventually
+        push you to hitting request quota and incurring cost. I will give you
+        info regarding usage cost beyond the free deployment level.
     - image: /img/coffee-gear.png
       text: >
         We offer a small, but carefully curated selection of brewing gear and
@@ -30,13 +32,6 @@ intro:
         to help. You can schedule a custom 1-on-1 consultation with our baristas
         to learn anything you want to know about coffee roasting and brewing.
         Email us or call the store for details.
-    - image: /img/meeting-space.png
-      text: >
-        We believe that good coffee has the power to bring people together.
-        That’s why we decided to turn a corner of our shop into a cozy meeting
-        space where you can hang out with fellow coffee lovers and learn about
-        coffee making techniques. All of the artwork on display there is for
-        sale. The full price you pay goes to the artist.
   heading: What we offer
   description: >
     Kaldi is the ultimate spot for coffee lovers who want to learn about their
