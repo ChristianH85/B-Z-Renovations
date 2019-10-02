@@ -1,4 +1,4 @@
 ---
-image: /img/burg.jpg
+image: /img/20190811_085838.jpg
 ---
 
