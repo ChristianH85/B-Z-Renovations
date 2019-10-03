@@ -6,11 +6,6 @@ heading: '123 Somewhere ln Austin,TX 78741'
 description: charming description of what the house you are selling has to offer
 intro:
   blurbs:
-    - image: /img/img_3115.jpg
-      text: >-
-        Dog Not Included. Point is you can add whatever you want to this to sell
-        the properties along side an image. all of this can be added or deleted
-        in Admin. 
     - image: /img/img_7649.jpg
       text: >-
         like this image. maybe its a summer kitchen maybe a hot tub or bar.
@@ -19,6 +14,11 @@ intro:
         Also I can add new inputs or map capability but that will eventually
         push you to hitting request quota and incurring cost. I will give you
         info regarding usage cost beyond the free deployment level.
+    - image: /img/img_3115.jpg
+      text: >-
+        Dog Not Included. Point is you can add whatever you want to this to sell
+        the properties along side an image. all of this can be added or deleted
+        in Admin. 
     - image: /img/coffee-gear.png
       text: >
         We offer a small, but carefully curated selection of brewing gear and
