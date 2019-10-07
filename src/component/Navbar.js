@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import github from '../img/github-icon.svg'
-import logo from '../img/logo.svg'
+// import useWindowSize from './useWindowSize';
+// import github from '../img/github-icon.svg'
+// import logo from '../img/logo.png'
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -11,8 +12,15 @@ const Navbar = class extends React.Component {
       navBarActiveClass: '',
     }
   }
-
+  
+  componentDidMount=()=>{
+    // const { width, height } = useWindowSize();
+ 
+// console.log(width, height);
+    // console.log(this.props.windowWidth)
+  }
   toggleHamburger = () => {
+    
     // toggle the active boolean in the state
     this.setState(
       {
@@ -39,13 +47,18 @@ const Navbar = class extends React.Component {
         role="navigation"
         aria-label="main-navigation"
       >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
+        <div className="container" style={{position:"fixed", top:"0", backgroundColor:"rgba(0, 0, 0, 0.84)", color: "white"}}>
+          <div className="navbar-brand" >
+            <Link to="/" className="navbar-item" title="Logo" style={{margin:"0em", padding:0}}>
+              {/* <img src={logo} alt="B and Z Renovations" style={{width:'100%', height:'100%'}}/> */}
+              <div style={{color:"rgba(255, 255, 255, 0.93)"}}>
+                <span style={{fontSize: '1.5em', fontWeight:"700"}}>B&#38;Z</span> <span style={{fontSize: '1.25em', fontWeight:"500"}}>Renovations</span>
+              </div>
+              {/* <img src="{logo} "alt="B & Z Renovations" style={{ width: '88px' }} /> */}
             </Link>
             {/* Hamburger menu */}
             <div
+            style={{color:"rgba(255, 255, 255, 0.93)", fontSize:"2em"}}
               className={`navbar-burger burger ${this.state.navBarActiveClass}`}
               data-target="navMenu"
               onClick={() => this.toggleHamburger()}

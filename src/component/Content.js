@@ -6,14 +6,14 @@ export const HTMLContent = ({ content, className }) => (
 )
 
 const Content = ({ content, className }) => (
-  <div className={className}>{content}</div>
+  <div className={className}> {console.log(content)}{content}</div>
 )
 
 Content.propTypes = {
   content: PropTypes.node,
   className: PropTypes.string,
 }
-
+console.log(Content.propTypes)
 HTMLContent.propTypes = Content.propTypes
 
 export default Content

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import Sidebar from './Sidebar'
-// import Navbar from '../components/Navbar'
+import Navbar from '../component/Navbar'
 import './all.sass'
 import useSiteMetadata from './SiteMetadata'
 import { withPrefix } from 'gatsby'
@@ -14,8 +14,9 @@ const TemplateWrapper = ({ children }) => {
         <html lang="en" />
         <title>{title}</title>
         <meta name="description" content={description} />
-        
-        <link
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+
+        {/* <link
           rel="apple-touch-icon"
           sizes="180x180"
           href={`${withPrefix('/')}img/apple-touch-icon.png`}
@@ -37,7 +38,7 @@ const TemplateWrapper = ({ children }) => {
           rel="mask-icon"
           href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
           color="#ff4400"
-        />
+        /> */}
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -48,13 +49,16 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <div className ="columns" >
-        {/* <Navbar /> */}
-        <div className="column is-2">
-        <Sidebar/>
+      <div className="container-fluid" style={{backgroundColor:'rgba(254, 247, 230, 0.87)'}}>
+      <div className ="row" >
+        <div className=" show-on-medium-and-down hide-on-large-only">
+          <Navbar />
+        </div>
+        <div className=" hide-on-med-and-down">
+          <Sidebar />
         </div>
         
-        <div className="column is-9 " >
+        <div className="col m10 offset-m2" style={{padding:"0em"}} >
           <div >
            {children}
           </div>
@@ -63,6 +67,8 @@ const TemplateWrapper = ({ children }) => {
       </div>
       
     </div>
+      </div>
+      
   )
 }
 

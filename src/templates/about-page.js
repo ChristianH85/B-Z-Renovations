@@ -1,25 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
-import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import Layout from '../component/Layout'
+import Content, { HTMLContent } from '../component/Content'
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
+    <section className="section section--gradient" style={{backgroundColor:'rgba(254, 247, 230, 0.87)', height:'100vh'}}>
+      <div className="container" >
+        {/* <div className="columns"> */}
+          {/* <div className="column is-10 is-offset-1"> */}
             <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
+              <h2 className="title is-size-3 has-text-weight-bold is-bold-light" style={{
+          
+          backgroundColor: 'rgba(30, 26, 26, 0.79)',
+          color: 'white',
+          padding: '1rem',
+          marginTop:'0em',
+          width:'100%'
+        }}>
                 {title}
               </h2>
               <PageContent className="content" content={content} />
             </div>
-          </div>
-        </div>
+          {/* </div> */}
+        {/* </div> */}
       </div>
     </section>
   )

@@ -2,7 +2,7 @@
 templateKey: product-page
 title: Works in Progress
 image: /img/20190811_085838.jpg
-heading: '123 Somewhere ln Austin,TX 78741'
+heading: "123 Somewhere ln Austin,TX 78741"
 description: charming description of what the house you are selling has to offer
 intro:
   blurbs:
@@ -18,7 +18,7 @@ intro:
       text: >-
         Dog Not Included. Point is you can add whatever you want to this to sell
         the properties along side an image. all of this can be added or deleted
-        in Admin. 
+        in Admin.
     - image: /img/coffee-gear.png
       text: >
         We offer a small, but carefully curated selection of brewing gear and
@@ -77,20 +77,19 @@ pricing:
         - Green or roasted beans"
         - One or two varieties of beans"
       plan: Small
-      price: '50'
-    - description: 'Great for avid drinkers, java-loving couples and bigger crowds'
+      price: "50"
+    - description: "Great for avid drinkers, java-loving couples and bigger crowds"
       items:
         - 6 lbs of coffee per month
         - Green or roasted beans
         - Up to 4 different varieties of beans
       plan: Big
-      price: '80'
+      price: "80"
     - description: Want a few tiny batches from different varieties? Try our custom plan
       items:
         - Whatever you need
         - Green or roasted beans
         - Unlimited varieties
       plan: Custom
-      price: '??'
+      price: "??"
 ---
-

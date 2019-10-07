@@ -1,6 +1,7 @@
 ---
 templateKey: about-page
-title: About our values
+path: /about
+title: About Us
 ---
 
 # **example: delete and put whatever in on admin**

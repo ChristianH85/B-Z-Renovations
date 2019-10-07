@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import logo from '../img/logo.png'
 import './../../App.css';
 
 
@@ -7,15 +8,11 @@ import './../../App.css';
 const Sidebar = class extends React.Component {
   render() {
     return (
-      <section className=" has-text-white-ter" style={{position:"fixed", zIndex:99}}>
-        <div className="content has-text-centered has-text-white-ter" style={{ height: '100vh', backgroundColor:"#1e1615" }}>
-          <div className="line1"style={{ fontSize: '3em', color: "white", marginBottom: "0em"}}>
-            B &#38; Z 
+      <section className="col s2 has-text-white-ter" style={{position:"fixed", zIndex:99, paddingLeft:'0em'}}>
+        <div className="content has-text-centered has-text-white-ter" style={{ height: '100vh', backgroundColor:"rgba(0, 0, 0, 0.84)" }}>
+          <div className="line1"style={{ fontSize: '2em', color: "white", marginBottom: "0em", width:'100%'}}>
+            <img src={logo} alt="B and Z Renovations" />
           </div>
-          <div className="line2">
-            Renovations
-          </div>
-        
         {/* <div className="content has-text-centered has-background-#2929aaaf has-text-white-ter"> */}
           {/* <div className="container has-background-black has-text-white-ter"> */}
             {/* <div className="columns"> */}
@@ -37,11 +34,11 @@ const Sidebar = class extends React.Component {
                         Projects
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="navbar-item" to="/contact/examples">
                         Form Examples
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <a
                         className="navbar-item"
@@ -60,7 +57,7 @@ const Sidebar = class extends React.Component {
                   <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/blog">
-                        Latest Stories
+                        Current Projects
                       </Link>
                     </li>
                     <li>
