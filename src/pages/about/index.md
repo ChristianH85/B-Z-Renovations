@@ -1,14 +1,17 @@
 ---
 templateKey: about-page
-title: About our values
+title: About Us
 ---
+# **EXAMPLE: delete and put whatever in on ADMIN LINK**
 
-# **example: delete and put whatever in on admin**
+****
 
-**Quality Products:**
+## **Quality Products:**
 
 > something about using top quality parts in your properties
+>
+> (H1 is a large heading like the Example line. H2
 
-**Locally Owned**
+## **Locally Owned**
 
 > always good to remind people the money will be reinvested into the community
