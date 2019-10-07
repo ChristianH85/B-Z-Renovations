@@ -12,7 +12,7 @@ title: About Us
 
 > something about using top quality parts in your properties
 
-> (H1 is a large heading like the Example line. H2
+> H1 is a large heading like the Example line. H2 is a smaller heading
 
 ## **Locally Owned**
 
