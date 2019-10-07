@@ -4,12 +4,16 @@ path: /about
 title: About Us
 ---
 
-# **example: delete and put whatever in on admin**
+# **EXAMPLE: delete and put whatever in on ADMIN LINK**
 
-**Quality Products:**
+---
+
+## **Quality Products:**
 
 > something about using top quality parts in your properties
 
-**Locally Owned**
+> (H1 is a large heading like the Example line. H2
+
+## **Locally Owned**
 
 > always good to remind people the money will be reinvested into the community
