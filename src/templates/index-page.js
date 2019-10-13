@@ -8,17 +8,19 @@ import BlogRoll from '../component/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
-  // title,
+  title,
   heading,
-  subheading,
-  mainpitch,
-  description,
+  // subheading,
+  // mainpitch,
+  // description,
   intro,
-  
+ 
 }) => (
+
   // console.log(title)
   <div style={{alignContent:"center"}}>
     <img style={{width:'100%',height:'100%'}} src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}/>
+   
     {/* <div
       className="margin-top-1"
       style={{
@@ -92,7 +94,7 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>*/}
-                {/* <Features gridItems={intro.blurbs} /> */}
+                <Features gridItems={intro} />
                 <div className="columns">
                   <div className="column is-11 has-text-centered">
                     <Link className="btn" to="/blog">
@@ -117,6 +119,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
     </section> */}
+    {console.log(intro)}
   </div>
   
 )
@@ -135,7 +138,21 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log(frontmatter.intro)
+  let imageList=frontmatter.intro.blurbs
+  // if(frontmatter.intro){
+  //   let listImages= frontmatter.intro.blurbs
+  //   // listImages.push(frontmatter.intro)
+  //   console.log(listImages)
+  //   listImages.map((data)=>{
+  //     <div>
+  //    {/* { console.log(data.image)} */}
+  //     <img src={data.image}></img>
+  //     </div>
+  //   })
+  // }else{
+  //   console.log('nothing')
+  // }
   return (
     <Layout>
       <IndexPageTemplate
@@ -145,7 +162,7 @@ const IndexPage = ({ data }) => {
         // subheading={frontmatter.subheading}
         // mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
-        intro={frontmatter.intro}
+        intro={imageList}
       />
     </Layout>
   )

@@ -23,7 +23,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
         }}>
                 {title}
               </h2>
-              <PageContent className="content" content={content} />
+              <PageContent style={{color:'rgba(254, 247, 230, 0.87)'}} content={content} />
             </div>
           {/* </div> */}
         {/* </div> */}

@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../component/Layout'
 import Features from '../component/Features'
-import Testimonials from '../component/Testimonials'
-import Pricing from '../component/Pricing'
+// import Testimonials from '../component/Testimonials'
+// import Pricing from '../component/Pricing'
 import PreviewCompatibleImage from '../component/PreviewCompatibleImage'
 
 export const ProductPageTemplate = ({
@@ -12,21 +12,14 @@ export const ProductPageTemplate = ({
   title,
   heading,
   description,
-  intro,
+  blurbs,
   main,
   testimonials,
   fullImage,
   pricing,
 }) => (
   <div className="content" >
-    {/* <div
-      className="full-width-image-container margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-      }}
-    > */}
+    {console.log(blurbs)}
       <h2
         className="has-text-weight-bold is-size-1"
         style={{
@@ -39,7 +32,7 @@ export const ProductPageTemplate = ({
       >
         {title}
       </h2>
-    {/* </div> */}
+    
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
@@ -51,7 +44,7 @@ export const ProductPageTemplate = ({
           </div>
           <div className="columns">
             <div className="column is-10 is-offset-1">
-              <Features gridItems={intro.blurbs} />
+              {/* <Features gridItems={blurbs} /> */}
               <div className="columns">
                 <div className="column is-7">
                   <h3 className="has-text-weight-semibold is-size-3">
@@ -60,7 +53,7 @@ export const ProductPageTemplate = ({
                   <p>{main.description}</p>
                 </div>
               </div>
-              <div className="tile is-ancestor">
+              {/* <div className="tile is-ancestor">
                 <div className="tile is-vertical">
                   <div className="tile">
                     <div className="tile is-parent is-vertical">
@@ -80,8 +73,8 @@ export const ProductPageTemplate = ({
                     </article>
                   </div>
                 </div>
-              </div>
-              <Testimonials testimonials={testimonials} />
+              </div> */}
+              {/* <Testimonials testimonials={testimonials} />
               <div
                 className="full-width-image-container"
                 style={{
@@ -95,8 +88,8 @@ export const ProductPageTemplate = ({
               <h2 className="has-text-weight-semibold is-size-2">
                 {pricing.heading}
               </h2>
-              <p className="is-size-5">{pricing.description}</p>
-              <Pricing data={pricing.plans} />
+              <p className="is-size-5">{pricing.description}</p> */}
+              {/* <Pricing data={pricing.plans} /> */}
             </div>
           </div>
         </div>
@@ -111,7 +104,7 @@ ProductPageTemplate.propTypes = {
   heading: PropTypes.string,
   description: PropTypes.string,
   intro: PropTypes.shape({
-    blurbs: PropTypes.array,
+    picture: PropTypes.array,
   }),
   main: PropTypes.shape({
     heading: PropTypes.string,
@@ -126,12 +119,13 @@ ProductPageTemplate.propTypes = {
     heading: PropTypes.string,
     description: PropTypes.string,
     plans: PropTypes.array,
-  }),
+  })
+   
 }
 
 const ProductPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-
+  console.log('front'+{frontmatter})
   return (
     <Layout>
       <ProductPageTemplate
@@ -144,6 +138,8 @@ const ProductPage = ({ data }) => {
         testimonials={frontmatter.testimonials}
         fullImage={frontmatter.full_image}
         pricing={frontmatter.pricing}
+        // {...console.log('f2'+frontmatter.picture)}
+        // picture={frontmatter.picture}
       />
     </Layout>
   )

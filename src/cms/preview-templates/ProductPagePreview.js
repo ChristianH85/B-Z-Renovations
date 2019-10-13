@@ -3,9 +3,14 @@ import PropTypes from 'prop-types'
 import { ProductPageTemplate } from '../../templates/product-page'
 
 const ProductPagePreview = ({ entry, getAsset }) => {
+  const entryImgs = entry.getIn(['data', 'picture'])
+  console.log(entryImgs)
+  const imgs = entryImgs ? entryImgs.toJS() : []
+  console.log(imgs)
   const entryBlurbs = entry.getIn(['data', 'intro', 'blurbs'])
+  console.log()
   const blurbs = entryBlurbs ? entryBlurbs.toJS() : []
-
+  console.log(''+blurbs)
   const entryTestimonials = entry.getIn(['data', 'testimonials'])
   const testimonials = entryTestimonials ? entryTestimonials.toJS() : []
 
@@ -42,6 +47,11 @@ const ProductPagePreview = ({ entry, getAsset }) => {
         description: entry.getIn(['data', 'pricing', 'description']),
         plans: pricingPlans,
       }}
+      picture={[{
+        heading: entry.getIn('data', 'picture', 'heading'),
+        image: entry.getIn('data', 'image'),
+        description: entry.getIn('data', 'picture', 'desctiption')
+      }]}
     />
   )
 }
