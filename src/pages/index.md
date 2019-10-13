@@ -2,7 +2,6 @@
 templateKey: index-page
 title: B & Z Renovations
 image: /img/20190811_085838.jpg
-title: "B & Z Renovations"
 intro:
   blurbs:
     - image: /img/img_7649.jpg
