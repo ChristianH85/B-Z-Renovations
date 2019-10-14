@@ -57,8 +57,8 @@ const TemplateWrapper = ({ children }) => {
         <div className=" hide-on-med-and-down">
           <Sidebar />
         </div>
-        
-        <div className="col m10 offset-m2" style={{padding:"0em"}} >
+        {}
+        <div  style={{padding:"0em", alignContent:'center'}} >
           <div >
            {children}
           </div>

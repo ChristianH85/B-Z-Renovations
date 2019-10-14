@@ -29,11 +29,11 @@ const Sidebar = class extends React.Component {
                         About
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="navbar-item" to="/products">
                         Projects
                       </Link>
-                    </li>
+                    </li> */}
                     {/* <li>
                       <Link className="navbar-item" to="/contact/examples">
                         Form Examples
@@ -55,15 +55,17 @@ const Sidebar = class extends React.Component {
               {/* <div className="column is-4">
                 <section> */}
                   <ul className="menu-list">
-                    <li>
+                    {/* <li>
                       <Link className="navbar-item" to="/blog">
                         Current Projects
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
-                      <Link className="navbar-item" to="/contact">
+                      <button style={{color:"#01040a", backgroundColor:"#ffffff",position: 'fixed',bottom: '1em'  }} >
+                        <a href="mailto:chenry5724@gmail.com"style={{color:"#01040a"}}>
                         Contact
-                      </Link>
+                        </a>
+                      </button>
                     </li>
                   </ul>
                 {/* </section>
