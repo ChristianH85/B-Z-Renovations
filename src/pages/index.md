@@ -3,6 +3,8 @@ templateKey: index-page
 title: B & Z Renovations
 image: /img/20190811_085838.jpg
 heading: heading
+available: November
+asking price: '$1,000,000'
 intro:
   blurbs:
     - image: /img/20190929_133538.jpg
@@ -26,8 +28,11 @@ intro:
       text: esspresso
     - image: /img/products-grid3.jpg
       text: sdfsdfsf
-    - image: /img/burg.jpg
-      text: sdcdcdsc
+    - image: /img/img_7638.jpg
+      text: >-
+        skulls not included but you can add a screen shot of a map or i can add
+        an interactive one pretty easy and it wouldnt cost but you do need a
+        card on file for it
     - image: /img/20190811_085838.jpg
       text: gbrtbrbr
   description: split level brick home 3br 2ba
