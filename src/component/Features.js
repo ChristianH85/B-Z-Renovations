@@ -1,29 +1,57 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import PreviewCompatibleImage from '../component/PreviewCompatibleImage'
+import Photos from './Photos'
 
 
-
+// const [feature, setFeature] = useState({
+//   src:'',
+//   text:''
+// });
+// const [pics, setPics] = useState('')
+// const handleClick =(e)=>{
+//   console.log(e.target.name)
+//   let list=pics
+//   list.map(data=>{
+//   if(e.target.name===data.image.childImageSharp.fluid.src){
+//     let src =e.target.name
+//     let text = data.text
+//     setFeature({src:src, text:text})
+//   }
+//   })
+//   // if(e.src=== )
+// }
 const FeatureGrid = ( gridItems ) => (
-  <div>
-  <div className='row'>
-    <div className='col s2' style={{ height:'100vh',overflow:'auto'}}>
-    {gridItems.gridItems.map(item=>{
+
+ 
+  <div className='card' style={{backgroundColor:'#474e5c',height:'100vh'}}>
+    <Photos {...gridItems}/>
+  {/* <div className='row'>
+    <div className='col s2' style={{ height:'80vh',overflow:'auto', marginTop:'10vh'}}>
+    {setPics(gridItems.gridItems)}
+      
+      {gridItems.gridItems.map(item=>{
     let img=item.image.childImageSharp.fluid.src
    console.log(img)
    return(
-     <div style={{ height:'10vh',margin:'0px'}}>
+     <button onClick={handleClick()}name={img} style={{ height:'10vh',margin:'0px'}}>
        <img src={img} style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}></img>
-     </div>
+     </button>
    )
   })}
     </div>
-    <div className='col s8 offset-s1' >
-        <img src='/static/252130ffc7bfdd0064db7353008a53ed/affd1/img_7649.jpg'style={{width: '80vw', height:'60vh', marginTop:'20vh'}}></img>
-    </div>
-  
+    {feature?
+    <div className='col s8 offset-s1'>
+        <img src={feature.src} style={{width: '80vw', height:'60vh', marginTop:'20vh'}}></img>
+        <p>{feature.text}</p>
+    </div>:
+    <div className='col s8 offset-s1'>
+    <img src={gridItems.gridItems[0].image.childImageSharp.fluid.src} style={{width: '80vw', height:'60vh', marginTop:'20vh'}}></img>
+    <p>{gridItems[0].text}</p>
   </div>
-  <div className="row">
+  }
+  </div> */}
+  {/* <div className="row">
    
   {console.log(gridItems.gridItems)}
       {gridItems.gridItems.map(item => ( 
@@ -46,7 +74,7 @@ const FeatureGrid = ( gridItems ) => (
         </section>
       </div>
     ))}
-  </div>
+  </div> */}
   </div>
 )
 
@@ -58,5 +86,5 @@ FeatureGrid.propTypes = {
     })
   ),
 }
-
+ 
 export default FeatureGrid

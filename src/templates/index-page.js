@@ -4,7 +4,7 @@ import { Link, graphql } from 'gatsby'
 
 import Layout from '../component/Layout'
 import Features from '../component/Features'
-import BlogRoll from '../component/BlogRoll'
+// import BlogRoll from '../component/BlogRoll'
 
 export const IndexPageTemplate = ({
   image,
@@ -12,7 +12,9 @@ export const IndexPageTemplate = ({
   heading,
   // subheading,
   // mainpitch,
-  // description,
+  description,
+  available,
+  askingPrice,
   intro,
  
 }) => (
@@ -20,7 +22,7 @@ export const IndexPageTemplate = ({
   // console.log(title)
   <div style={{alignContent:"center"}}>
     <img style={{width:'100%',height:'100%'}} src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}/>
-   
+   {/* {console.log(title,askingPrice,available, description)} */}
     {/* <div
       className="margin-top-1"
       style={{
@@ -94,7 +96,8 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>*/}
-                <Features gridItems={intro} />
+                {console.log(heading)}
+                <Features gridItems={intro} heading={heading} description={description}available={available} askingPrice={askingPrice}/>
                 {/* <div className="columns">
                   <div className="column is-11 has-text-centered"> */}
                     {/* <Link className="btn" to="/blog">
@@ -126,19 +129,21 @@ export const IndexPageTemplate = ({
 
 IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  // title: PropTypes.string,
+  askingPrice: PropTypes.string,
+  available: PropTypes.string,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
   intro: PropTypes.shape({
+    heading: PropTypes.string,
     blurbs: PropTypes.array,
   }),
 }
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
-  console.log(frontmatter.intro)
+  // console.log(frontmatter.intro)
   let imageList=frontmatter.intro.blurbs
   // if(frontmatter.intro){
   //   let listImages= frontmatter.intro.blurbs
@@ -155,13 +160,14 @@ const IndexPage = ({ data }) => {
   // }
   return (
     <Layout>
+      {console.log (frontmatter)}
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        // subheading={frontmatter.subheading}
-        // mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
+        heading={frontmatter.intro.heading}
+        askingPrice={frontmatter.asking_price}
+        available={frontmatter.available}
+        description={frontmatter.intro.description}
         intro={imageList}
       />
     </Layout>
@@ -190,14 +196,15 @@ export const pageQuery = graphql`
             }
           }
         }
+        available
         heading
-       
+        asking_price
         description
         intro {
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 500, quality: 100) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -1,58 +1,58 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { graphql } from 'gatsby'
-import Layout from '../component/Layout'
-import Features from '../component/Features'
+// import React from 'react'
+// import PropTypes from 'prop-types'
+// import { graphql } from 'gatsby'
+// import Layout from '../component/Layout'
+// import Features from '../component/Features'
 // import Testimonials from '../component/Testimonials'
 // import Pricing from '../component/Pricing'
-import PreviewCompatibleImage from '../component/PreviewCompatibleImage'
+// import PreviewCompatibleImage from '../component/PreviewCompatibleImage'
 
-export const ProductPageTemplate = ({
-  image,
-  title,
-  heading,
-  description,
-  blurbs,
-  main,
-  testimonials,
-  fullImage,
-  pricing,
-}) => (
-  <div className="content" >
-    {console.log(blurbs)}
-      <h2
-        className="has-text-weight-bold is-size-1"
-        style={{
-          boxShadow: '0.5rem 0 0 rgba(30, 26, 26, 0.79), -0.5rem 0 0 rgba(30, 26, 26, 0.79)',
-          backgroundColor: 'rgba(30, 26, 26, 0.79)',
-          color: 'white',
-          padding: '1rem',
-          marginTop:'0em',
-        }}
-      >
-        {title}
-      </h2>
+// export const ProductPageTemplate = ({
+//   image,
+//   title,
+//   heading,
+//   description,
+//   blurbs,
+//   main,
+//   testimonials,
+//   fullImage,
+//   pricing,
+// }) => (
+//   <div className="content" >
+//     {console.log(blurbs)}
+//       <h2
+//         className="has-text-weight-bold is-size-1"
+//         style={{
+//           boxShadow: '0.5rem 0 0 rgba(30, 26, 26, 0.79), -0.5rem 0 0 rgba(30, 26, 26, 0.79)',
+//           backgroundColor: 'rgba(30, 26, 26, 0.79)',
+//           color: 'white',
+//           padding: '1rem',
+//           marginTop:'0em',
+//         }}
+//       >
+//         {title}
+//       </h2>
     
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-7 is-offset-1">
-              <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
-              <p>{description}</p>
-            </div>
-          </div>
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              {/* <Features gridItems={blurbs} /> */}
-              <div className="columns">
-                <div className="column is-7">
-                  <h3 className="has-text-weight-semibold is-size-3">
-                    {main.heading}
-                  </h3>
-                  <p>{main.description}</p>
-                </div>
-              </div>
+//     <section className="section section--gradient">
+//       <div className="container">
+//         <div className="section">
+//           <div className="columns">
+//             <div className="column is-7 is-offset-1">
+//               <h3 className="has-text-weight-semibold is-size-2">{heading}</h3>
+//               <p>{description}</p>
+//             </div>
+//           </div>
+//           <div className="columns">
+//             <div className="column is-10 is-offset-1">
+//               {/* <Features gridItems={blurbs} /> */}
+//               <div className="columns">
+//                 <div className="column is-7">
+//                   <h3 className="has-text-weight-semibold is-size-3">
+//                     {main.heading}
+//                   </h3>
+//                   <p>{main.description}</p>
+//                 </div>
+//               </div>
               {/* <div className="tile is-ancestor">
                 <div className="tile is-vertical">
                   <div className="tile">
@@ -90,155 +90,155 @@ export const ProductPageTemplate = ({
               </h2>
               <p className="is-size-5">{pricing.description}</p> */}
               {/* <Pricing data={pricing.plans} /> */}
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
-)
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   </div>
+// )
 
-ProductPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  heading: PropTypes.string,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    picture: PropTypes.array,
-  }),
-  main: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-    image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  }),
-  testimonials: PropTypes.array,
-  fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  pricing: PropTypes.shape({
-    heading: PropTypes.string,
-    description: PropTypes.string,
-    plans: PropTypes.array,
-  })
+// ProductPageTemplate.propTypes = {
+//   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+//   title: PropTypes.string,
+//   heading: PropTypes.string,
+//   description: PropTypes.string,
+//   intro: PropTypes.shape({
+//     picture: PropTypes.array,
+//   }),
+//   main: PropTypes.shape({
+//     heading: PropTypes.string,
+//     description: PropTypes.string,
+//     image1: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+//     image2: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+//     image3: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+//   }),
+//   testimonials: PropTypes.array,
+//   fullImage: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+//   pricing: PropTypes.shape({
+//     heading: PropTypes.string,
+//     description: PropTypes.string,
+//     plans: PropTypes.array,
+//   })
    
-}
+// }
 
-const ProductPage = ({ data }) => {
-  const { frontmatter } = data.markdownRemark
-  console.log('front'+{frontmatter})
-  return (
-    <Layout>
-      <ProductPageTemplate
-        image={frontmatter.image}
-        title={frontmatter.title}
-        heading={frontmatter.heading}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
-        main={frontmatter.main}
-        testimonials={frontmatter.testimonials}
-        fullImage={frontmatter.full_image}
-        pricing={frontmatter.pricing}
-        // {...console.log('f2'+frontmatter.picture)}
-        // picture={frontmatter.picture}
-      />
-    </Layout>
-  )
-}
+// const ProductPage = ({ data }) => {
+//   const { frontmatter } = data.markdownRemark
+//   console.log('front'+{frontmatter})
+//   return (
+//     <Layout>
+//       <ProductPageTemplate
+//         image={frontmatter.image}
+//         title={frontmatter.title}
+//         heading={frontmatter.heading}
+//         description={frontmatter.description}
+//         intro={frontmatter.intro}
+//         main={frontmatter.main}
+//         testimonials={frontmatter.testimonials}
+//         fullImage={frontmatter.full_image}
+//         pricing={frontmatter.pricing}
+//         // {...console.log('f2'+frontmatter.picture)}
+//         // picture={frontmatter.picture}
+//       />
+//     </Layout>
+//   )
+// }
 
-ProductPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
+// ProductPage.propTypes = {
+//   data: PropTypes.shape({
+//     markdownRemark: PropTypes.shape({
+//       frontmatter: PropTypes.object,
+//     }),
+//   }),
+// }
 
-export default ProductPage
+// export default ProductPage
 
-export const productPageQuery = graphql`
-  query ProductPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      frontmatter {
-        title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
-        main {
-          heading
-          description
-          image1 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image2 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 526, quality: 92) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-          image3 {
-            alt
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1075, quality: 72) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-          }
-        }
-        testimonials {
-          author
-          quote
-        }
-        full_image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pricing {
-          heading
-          description
-          plans {
-            description
-            items
-            plan
-            price
-          }
-        }
-      }
-    }
-  }
-`
+// export const productPageQuery = graphql`
+//   query ProductPage($id: String!) {
+//     markdownRemark(id: { eq: $id }) {
+//       frontmatter {
+//         title
+//         image {
+//           childImageSharp {
+//             fluid(maxWidth: 2048, quality: 100) {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//         heading
+//         description
+//         intro {
+//           blurbs {
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 240, quality: 64) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//             text
+//           }
+//           heading
+//           description
+//         }
+//         main {
+//           heading
+//           description
+//           image1 {
+//             alt
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 526, quality: 92) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//           image2 {
+//             alt
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 526, quality: 92) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//           image3 {
+//             alt
+//             image {
+//               childImageSharp {
+//                 fluid(maxWidth: 1075, quality: 72) {
+//                   ...GatsbyImageSharpFluid
+//                 }
+//               }
+//             }
+//           }
+//         }
+//         testimonials {
+//           author
+//           quote
+//         }
+//         full_image {
+//           childImageSharp {
+//             fluid(maxWidth: 2048, quality: 100) {
+//               ...GatsbyImageSharpFluid
+//             }
+//           }
+//         }
+//         pricing {
+//           heading
+//           description
+//           plans {
+//             description
+//             items
+//             plan
+//             price
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
