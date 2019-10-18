@@ -50,7 +50,7 @@ const TemplateWrapper = ({ children }) => {
         />
       </Helmet>
       <div className="container-fluid" style={{backgroundColor:'#6f6f73'}}>
-      <div className ="row" >
+      <div className ="row" style={{margin:'0em'}}>
         <div className=" show-on-medium-and-down hide-on-large-only">
           <Navbar />
         </div>

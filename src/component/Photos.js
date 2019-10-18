@@ -66,7 +66,7 @@ class Photos extends React.Component{
         }
     render(){
       return(
-          <div className='card'>
+          <div className='card'style={{height:'100vh'}}>
         <div className='row'>
         <div className='col s2' style={{ height:'80vh',overflow:'auto', marginTop:'10vh'}}>
         
@@ -84,7 +84,7 @@ class Photos extends React.Component{
         }
         </div>
         {/* {this.state.feature? */}
-        <div className='col s8 offset-s1'style={{height:'100vh',overflow:'auto'}}>
+        <div className='col s9 'style={{height:'100%',overflow:'auto', paddingBottom:'1em',marginTop:'10vh'}}>
            
             <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5>
            
