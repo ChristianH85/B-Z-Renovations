@@ -68,7 +68,7 @@ class Photos extends React.Component{
       return(
           <div className='card'style={{height:'100vh'}}>
         <div className='row'>
-        <div className='col s2' style={{ height:'80vh',overflow:'auto', marginTop:'10vh'}}>
+        <div className='col s2' style={{ height:'90vh',overflow:'auto', marginTop:'5vh'}}>
         
           {this.state.pics.length>0?
           this.state.pics.map(item=>{
@@ -84,13 +84,15 @@ class Photos extends React.Component{
         }
         </div>
         {/* {this.state.feature? */}
-        <div className='col s9 'style={{height:'100%',overflow:'auto', paddingBottom:'1em',marginTop:'10vh'}}>
+        <div className=' col s9 'style={{height:'100%',overflow:'auto', paddingBottom:'1em',paddingLeft:'0em',marginTop:'5vh'}}>
            
             <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5>
            
-           <span><h6>Available:{this.props.available}</h6><div>Asking Price:{this.props.askingPrice}</div><p>{this.props.description}</p></span> 
-            <img src={this.state.feature.src} alt='feature image missing'style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'2em'}}></img>
+           <h6 style={{margin:'0em'}}>Available:{this.props.available}</h6><div>Asking Price:{this.props.askingPrice}</div><p>{this.props.description}</p>
+            <img src={this.state.feature.src} alt='feature image missing'style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'0em'}}></img>
+            <div className="card-content" style={{height:'15vh', overflow: 'auto'}}>
             <p>{this.state.feature.text}</p>
+            </div>
         </div>
          {/* <div className='col s8 offset-s1'>
          <img src={this.state.feature.src} style={{width: '80vw', height:'60vh', marginTop:'20vh'}}></img>
