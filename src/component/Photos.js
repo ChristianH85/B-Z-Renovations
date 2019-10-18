@@ -85,10 +85,10 @@ class Photos extends React.Component{
         </div>
         {/* {this.state.feature? */}
         <div className=' col s9 'style={{height:'100%',overflow:'auto', paddingBottom:'1em',paddingLeft:'0em',marginTop:'5vh'}}>
-           
-            <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5>
-           
-           <h6 style={{margin:'0em'}}>Available:{this.props.available}</h6><div>Asking Price:{this.props.askingPrice}</div><p>{this.props.description}</p>
+           <div className='card-title'>
+           <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5> 
+           <h6 style={{margin:'0em'}}>Available:{this.props.available}</h6><h6>Asking Price:{this.props.askingPrice}</h6><h6>{this.props.description}</h6>
+           </div>
             <img src={this.state.feature.src} alt='feature image missing'style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'0em'}}></img>
             <div className="card-content" style={{height:'15vh', overflow: 'auto'}}>
             <p>{this.state.feature.text}</p>

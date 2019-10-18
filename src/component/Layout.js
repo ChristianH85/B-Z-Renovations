@@ -58,7 +58,7 @@ const TemplateWrapper = ({ children }) => {
           <Sidebar />
         </div>
         {}
-        <div  className='col m10 offset-m2' style={{padding:"0em", alignContent:'center'}} >
+        <div  className='col s12 m12 l10 offset-l2' style={{padding:"0em", alignContent:'center'}} >
           <div >
            {children}
           </div>
