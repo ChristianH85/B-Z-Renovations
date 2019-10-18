@@ -33,7 +33,7 @@ export const AboutPageTemplate = ({ title, description,avatar}) => {
                 return(
                     <div className='row'>
                       <div className='col s3'>
-                      <img src={photo.src}></img>
+                      <img src={photo.src} alt='photo missing'></img>
                       <p>{data.text}</p>
                       </div>
                     </div>

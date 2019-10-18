@@ -76,7 +76,7 @@ class Photos extends React.Component{
             // console.log(this.props)
             return(
                 <button type='button' key={img} onClick={this.handleClick} name={img} style={{ height:'10vh',margin:'0px'}}>
-                <img src={img} name={img} style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}></img>
+                <img src={img} alt="img missing"name={img} style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}></img>
                 </button>
                 )
                 }):
@@ -85,10 +85,13 @@ class Photos extends React.Component{
         </div>
         {/* {this.state.feature? */}
         <div className='col s8 offset-s1'style={{height:'100vh',overflow:'auto'}}>
+            <div className='row'>
+            <span className="col s10"><h6>Available:{this.props.available}</h6><div>Asking Price:{this.props.askingPrice}</div></span> 
+            </div> 
             <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5>
            
            <span><h6>Available:{this.props.available}</h6><div>Asking Price:{this.props.askingPrice}</div><p>{this.props.description}</p></span> 
-            <img src={this.state.feature.src} style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'2em'}}></img>
+            <img src={this.state.feature.src} alt='feature image missing'style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'2em'}}></img>
             <p>{this.state.feature.text}</p>
         </div>
          {/* <div className='col s8 offset-s1'>

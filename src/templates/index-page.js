@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../component/Layout'
 import Features from '../component/Features'
@@ -21,7 +21,7 @@ export const IndexPageTemplate = ({
 
   // console.log(title)
   <div style={{alignContent:"center"}}>
-    <img style={{width:'100%',height:'100%'}} src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image}/>
+    <img style={{width:'100vw',height:'100vh'}} src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt='full img missing'/>
    {/* {console.log(title,askingPrice,available, description)} */}
     {/* <div
       className="margin-top-1"

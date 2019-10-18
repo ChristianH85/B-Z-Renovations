@@ -49,7 +49,7 @@ const TemplateWrapper = ({ children }) => {
           content={`${withPrefix('/')}img/og-image.jpg`}
         />
       </Helmet>
-      <div className="container-fluid" style={{backgroundColor:'rgba(254, 247, 230, 0.87)'}}>
+      <div className="container-fluid" style={{backgroundColor:'#6f6f73'}}>
       <div className ="row" >
         <div className=" show-on-medium-and-down hide-on-large-only">
           <Navbar />
