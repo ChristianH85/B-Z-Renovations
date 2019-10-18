@@ -42,14 +42,14 @@ class Photos extends React.Component{
     //   setPics(data.gridItems)
        handleClick =(e)=>{
            let img= e.target.name
-          console.log(this.state.feature)
-          console.log("BOOOOOOOOOOO"+img)
+        //   console.log(this.state.feature)
+        //   console.log("BOOOOOOOOOOO"+img)
     //       this.setState({})
           
           let list=this.state.pics
           list.map(data=>{
             // console.log(data.image.childImageSharp.fluid.src)
-            console.log(img)
+            // console.log(img)
           if(data.image.childImageSharp.fluid.src===img){
             this.setState({feature:{
                 src:img,
