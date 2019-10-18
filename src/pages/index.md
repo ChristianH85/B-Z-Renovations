@@ -3,12 +3,12 @@ templateKey: index-page
 title: B & Z Renovations
 image: /img/20190811_085838.jpg
 heading: heading
-available: November
-asking price: "$1,000,000"
+available: November - December
+asking price: '$210,000'
 intro:
   blurbs:
     - image: /img/20190929_133538.jpg
-      text: " Anyhow You should delete these and replace. The slightly harder Part is setting the font colors and formatting. that has to be done in code. Also I can add new inputs or map capability but that will eventually push you to hitting request quota and incurring cost. I will give you info regarding usage cost beyond the free deployment level."
+      text: ' Anyhow You should delete these and replace. The slightly harder Part is setting the font colors and formatting. that has to be done in code. Also I can add new inputs or map capability but that will eventually push you to hitting request quota and incurring cost. I will give you info regarding usage cost beyond the free deployment level.'
     - image: /img/img_3115.jpg
       text: >-
         Dog Not Included. Point is you can add whatever you want to this to sell
@@ -35,6 +35,10 @@ intro:
         card on file for it
     - image: /img/20190811_085838.jpg
       text: gbrtbrbr
-  description: split level brick home 3br 2ba
-  heading: 123 arbor av
+  description: >-
+    4BR/2BA Single family home with a partially finished basement and 1900 sqft
+    of living space. Brand new energy efficient heat pump and fully remodeled
+    inside and out. (Interior work still in progress, pics coming soon!)
+  heading: '416 Collington Dr Lynchburg, VA 24502'
 ---
+
