@@ -85,9 +85,7 @@ class Photos extends React.Component{
         </div>
         {/* {this.state.feature? */}
         <div className='col s8 offset-s1'style={{height:'100vh',overflow:'auto'}}>
-            <div className='row'>
-            <span className="col s10"><h6>Available:{this.props.available}</h6><div>Asking Price:{this.props.askingPrice}</div></span> 
-            </div> 
+           
             <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5>
            
            <span><h6>Available:{this.props.available}</h6><div>Asking Price:{this.props.askingPrice}</div><p>{this.props.description}</p></span> 
