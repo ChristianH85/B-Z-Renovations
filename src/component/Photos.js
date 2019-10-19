@@ -1,4 +1,5 @@
 import React  from 'react'
+import ModalImage from "react-modal-image";
 // import PropTypes from 'prop-types'
 // import PreviewCompatibleImage from '../component/PreviewCompatibleImage'
 
@@ -69,19 +70,38 @@ class Photos extends React.Component{
           <div className='card'style={{height:'100vh'}}>
         <div className='row'>
         <div className='col s2' style={{ height:'90vh',overflow:'auto', marginTop:'5vh'}}>
-        
+        <div className='row'>
           {this.state.pics.length>0?
           this.state.pics.map(item=>{
+            let text=item.text  
             let img=item.image.childImageSharp.fluid.src
             // console.log(this.props)
             return(
-                <button type='button' key={img} onClick={this.handleClick} name={img} style={{ height:'10vh',margin:'0px'}}>
-                <img src={img} alt="img missing"name={img} style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}></img>
-                </button>
+                
+                    <ModalImage
+                    className='col s3'
+                style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}
+                small={img}
+                large={img}
+                hideDownload='false'
+                alt={<div>{text}</div>}
+                ><p>{text}</p></ModalImage>
+               
+                // <button type='button' key={img} onClick={this.handleClick} name={img} style={{ height:'10vh',margin:'0px'}}>
+                // <ModalImage
+                // style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}
+                // small={img}
+                // large={img}
+                // hideDownload='false'
+                // alt={text}
+                // ><p>{text}</p></ModalImage>
+                // <img src={img} alt="img missing"name={img} style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}></img>
+                // </button>
                 )
                 }):
                 <div style={{ height:'10vh',margin:'0px'}}></div>
         }
+        </div>
         </div>
         {/* {this.state.feature? */}
         <div className=' col s9 'style={{height:'100%',overflow:'auto', paddingBottom:'1em',paddingLeft:'0em',marginTop:'5vh'}}>
@@ -89,10 +109,43 @@ class Photos extends React.Component{
            <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5> 
            <h6 style={{margin:'0em'}}>Available:{this.props.available}</h6><h6>Asking Price:{this.props.askingPrice}</h6><h6>{this.props.description}</h6>
            </div>
-            <img src={this.state.feature.src} alt='feature image missing'style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'0em'}}></img>
-            <div className="card-content" style={{height:'15vh', overflow: 'auto'}}>
+           <div className='row' style={{ height: '40vh', overflow: 'auto', margin:'0px', border: 'solid 1px #fff'}}>>
+           {this.state.pics.length>0?
+          this.state.pics.map(item=>{
+            let text=item.text  
+            let img=item.image.childImageSharp.fluid.src
+            // console.log(this.props)
+            return(
+                <div className='col s4 offset-s2'style={{ overflow: 'auto', margin:'0px',padding: '0px', border: 'solid 1px #fff'}}>
+                    <ModalImage
+                //     className='col s4'
+                // style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}
+                small={img}
+                large={img}
+                hideDownload='false'
+                alt={<div>{text}</div>}
+                />
+               </div>
+                // <button type='button' key={img} onClick={this.handleClick} name={img} style={{ height:'10vh',margin:'0px'}}>
+                // <ModalImage
+                // style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}
+                // small={img}
+                // large={img}
+                // hideDownload='false'
+                // alt={text}
+                // ><p>{text}</p></ModalImage>
+                // <img src={img} alt="img missing"name={img} style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}></img>
+                // </button>
+                )
+                }):<div style={{ height:'0vh',margin:'0px'}}></div>
+                
+        }
+           </div>
+           
+            {/* <img src={this.state.feature.src} alt='feature image missing'style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'0em'}}></img> */}
+            {/* <div className="card-content" style={{height:'15vh', overflow: 'auto'}}>
             <p>{this.state.feature.text}</p>
-            </div>
+            </div> */}
         </div>
          {/* <div className='col s8 offset-s1'>
          <img src={this.state.feature.src} style={{width: '80vw', height:'60vh', marginTop:'20vh'}}></img>

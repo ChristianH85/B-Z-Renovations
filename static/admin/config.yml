@@ -90,12 +90,10 @@ collections:
           - { label: Heading, name: heading, widget: string }
           - { label: Available, name: available, widget: string }
           - { label: Asking Price, name: asking price, widget: string }
-          - {
-              label: Intro,
-              name: intro,
-              widget: object,
-              fields:
-                [
+          - { label: Intro, name: intro, widget: object, fields: [
+                  # { label: Sqft, name: sqft, widget: string },
+                  # { label: acreage, name: acreage, widget: string },
+                  # { label: SchoolZone, name: school zone, widget: string },
                   { label: address, name: heading, widget: string },
                   { label: Description, name: description, widget: text },
                   {
@@ -108,8 +106,7 @@ collections:
                         { label: Text, name: text, widget: text },
                       ],
                   },
-                ],
-            }
+                ] }
 
           # - {
           #     label: Main,
