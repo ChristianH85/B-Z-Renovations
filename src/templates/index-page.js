@@ -21,7 +21,8 @@ export const IndexPageTemplate = ({
 
   // console.log(title)
   <div style={{alignContent:"center"}}>
-    <img style={{width:'100vw',height:'100vh'}} src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt='full img missing'/>
+    <img className="hide-on-med-and-down"style={{width:'100vw',height:'100vh'}} src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt='full img missing'/>
+    <img className="show-on-med-and-down"style={{width:'100vw'}} src={!!image.childImageSharp ? image.childImageSharp.fluid.src : image} alt='full img missing'/>
    {/* {console.log(title,askingPrice,available, description)} */}
     {/* <div
       className="margin-top-1"
