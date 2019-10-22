@@ -14,7 +14,7 @@ class Photos extends React.Component{
     componentDidMount(){
         // console.log(this.props)
         let pics=this.props
-        if(this.state.pics===''){
+        // if(this.state.pics===''){
             // let featureDefault= {
             //     src:pics.gridItems[0].image.childImageSharp.fluid.src,
             //     text:pics.gridItems[0].text
@@ -23,7 +23,7 @@ class Photos extends React.Component{
                     pics:pics.gridItems,
                     // feature:featureDefault
                 })
-        }
+        // }
 
         console.log(pics)
         console.log(this.state)
@@ -111,6 +111,7 @@ class Photos extends React.Component{
            </div>
            <div className='row' style={{ height: '40vh', overflow: 'auto', margin:'0px', border: 'solid 1px #fff'}}>
            {this.state.pics.length>0?
+           
           this.state.pics.map(item=>{
             let text=item.text  
             let img=item.image.childImageSharp.fluid.src
