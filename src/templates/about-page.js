@@ -8,14 +8,14 @@ export const AboutPageTemplate = ({ title, description,avatar}) => {
   // const PageContent = contentComponent || Content
   console.log(avatar)
   return (
-    <section className="section section--gradient" style={{backgroundColor:'rgba(254, 247, 230, 0.87)', height:'100vh'}}>
+    <section className="section section--gradient" style={{backgroundColor:'rgba(233, 232, 231, 1)', height:'100vh'}}>
       <div className="container" >
         {/* <div className="columns"> */}
           {/* <div className="column is-10 is-offset-1"> */}
             <div className="section">
               <h2 className="title has-text-weight-bold is-bold-light" style={{
           
-          backgroundColor: 'rgba(30, 26, 26, 0.79)',
+          backgroundColor: 'rgba(0, 0, 0, 0.84)',
           color: 'white',
           padding: '1rem',
           marginTop:'0em',
@@ -33,8 +33,8 @@ export const AboutPageTemplate = ({ title, description,avatar}) => {
                 return(
                     <div className='row'>
                       <div className='col s3'>
-                      <img src={photo.src} alt='photo missing'></img>
-                      <p>{data.text}</p>
+                      <img src={photo.src} alt='photo missing' style={{ border:'solid .25em rgba(0, 0, 0, 0.84)', borderRadius:'8px'}}></img>
+                      <p style={{fontSize:'.80em'}}>{data.text}</p>
                       </div>
                     </div>
                   )

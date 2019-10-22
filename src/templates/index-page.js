@@ -96,7 +96,7 @@ export const IndexPageTemplate = ({
                     <p>{description}</p>
                   </div>
                 </div>*/}
-                {console.log(heading)}
+                {/* {console.log(heading)} */}
                 <Features gridItems={intro} heading={heading} description={description}available={available} askingPrice={askingPrice}/>
                 {/* <div className="columns">
                   <div className="column is-11 has-text-centered"> */}
