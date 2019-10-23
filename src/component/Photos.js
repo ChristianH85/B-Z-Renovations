@@ -106,10 +106,10 @@ class Photos extends React.Component{
         {/* {this.state.feature? */}
         <div className=' col s10 offset-s1'style={{height:'100%',overflow:'auto', paddingBottom:'1em',paddingLeft:'0em',marginTop:'5vh'}}>
            <div className='card-title'>
-           <h5 style={{color:'#eb4034', margin:'0em'}}>{this.props.heading}</h5> 
-           <h6 style={{margin:'0em'}}>Available:{this.props.available}</h6><h6>Asking Price:{this.props.askingPrice}</h6><h6>{this.props.description}</h6>
-           </div>
-           <div className='row' style={{ height: '40vh', overflow: 'auto', margin:'0px', border: 'solid 1px #fff'}}>
+           <h5 style={{color:'#eb4034', marginBottom:'.5em'}}>{this.props.heading}</h5> 
+           <h6 style={{marginBottom:'.5em'}}>Available:{this.props.available}</h6><h6>Asking Price:{this.props.askingPrice}</h6><h6>{this.props.description}</h6>
+        </div>
+           <div className='row' style={{ height: '50vh', overflow: 'auto', margin:'0px', border: 'solid 1px #fff'}}>
            {this.state.pics.length>0?
            
           this.state.pics.map(item=>{
@@ -127,22 +127,19 @@ class Photos extends React.Component{
                 alt={<div>{text}</div>}
                 />
                </div>
-                // <button type='button' key={img} onClick={this.handleClick} name={img} style={{ height:'10vh',margin:'0px'}}>
-                // <ModalImage
-                // style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}
-                // small={img}
-                // large={img}
-                // hideDownload='false'
-                // alt={text}
-                // ><p>{text}</p></ModalImage>
-                // <img src={img} alt="img missing"name={img} style={{ width:'10vw',height:'10vh',margin:'0px', border: 'solid 1px #fff'}}></img>
-                // </button>
                 )
                 }):<div style={{ height:'0vh',margin:'0px'}}>no image</div>
                 
         }
+            
            </div>
-           
+           <div className='hide-on-large-only'>
+      <div>
+        <button style={{height:'10vh', width:'25vw', borderRadius:'100px',position:'fixed', bottom:'30px', right:'30px',backgroundColor:'rgba(0, 0, 0, 0.74)'}}>
+          <a href="mailto:chenry5724@gmail.com?" style={{color:'rgba(247, 248, 247, 1)',fontWeight:'600',fontSize:'1.25em'}}>Contact</a>
+        </button>
+      </div>
+    </div>
             {/* <img src={this.state.feature.src} alt='feature image missing'style={{width: '100vw', height:'60vh', marginTop:'0vh', padding:'0em'}}></img> */}
             {/* <div className="card-content" style={{height:'15vh', overflow: 'auto'}}>
             <p>{this.state.feature.text}</p>

@@ -54,7 +54,7 @@ const TemplateWrapper = ({ children }) => {
         <div className=" show-on-medium-and-down hide-on-large-only">
           <Navbar />
         </div>
-        <div className=" hide-on-med-and-down">
+        <div className="hide-on-med-and-down">
           <Sidebar />
         </div>
         {}

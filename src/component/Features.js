@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import PreviewCompatibleImage from '../component/PreviewCompatibleImage'
+// import PreviewCompatibleImage from '../component/PreviewCompatibleImage'
 import Photos from './Photos'
 
 
@@ -26,6 +26,7 @@ const FeatureGrid = ( gridItems ) => (
  
   <div className='card' style={{backgroundColor:'#474e5c',height:'100vh'}}>
     <Photos {...gridItems}/>
+    
   {/* <div className='row'>
     <div className='col s2' style={{ height:'80vh',overflow:'auto', marginTop:'10vh'}}>
     {setPics(gridItems.gridItems)}

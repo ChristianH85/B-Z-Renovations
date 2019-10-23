@@ -85,9 +85,11 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link> */}
-              <button className="navbar-item col s4 offset-s4 " >
-                <a href="mailto:chenry5724@gmail.com" style={{color:"#01040a"}}>Contact</a>
-              </button>
+              {/* <Link className="navbar-item col s4 offset-s4 " >
+                <button>
+                  <a href="mailto:chenry5724@gmail.com?" style={{color:"#01040a"}}>Contact</a>
+                </button>
+              </Link> */}
               {/* <Link className="navbar-item" to="/contact/examples">
                 Form Examples
               </Link> */}
