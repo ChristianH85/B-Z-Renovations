@@ -42,7 +42,7 @@ export default class Index extends React.Component {
           <div className="container">
             <div className="content" style={{backgroundColor:'rgba(0, 0, 0, 0.84)'}}>
               <h1>Contact Us</h1>
-              <button href="mailto:chenry5724@gmail.com"><a href="mailto:chenry5724@gmail.com">Contact Us</a></button>
+              <button href="mailto:bandzrenovations@gmail.com"><a href="mailto:chenry5724@gmail.com">Contact Us</a></button>
               {/* <ReactContactForm to="chenry5724@gmail.com" style={{backgroundColor:'rgba(0, 0, 0, 0.84)'}}/> */}
               {/* <form
                 name="contact"

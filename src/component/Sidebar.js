@@ -62,7 +62,7 @@ const Sidebar = class extends React.Component {
                     </li> */}
                     <li>
                       <button style={{color:"#01040a", backgroundColor:"#ffffff",position: 'fixed',bottom: '1em'  }} >
-                        <a href="mailto:chenry5724@gmail.com"style={{color:"#01040a"}}>
+                        <a href="mailto:bandzrenovations@gmail.com"style={{color:"#01040a"}}>
                         Contact
                         </a>
                       </button>
