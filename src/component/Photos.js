@@ -136,7 +136,7 @@ class Photos extends React.Component{
            <div className='hide-on-large-only'>
       <div>
         <button style={{height:'10vh', width:'25vw', borderRadius:'100px',position:'fixed', bottom:'30px', right:'30px',backgroundColor:'rgba(0, 0, 0, 0.74)'}}>
-          <a href="mailto:chenry5724@gmail.com?" style={{color:'rgba(247, 248, 247, 1)',fontWeight:'600',fontSize:'1.25em'}}>Contact</a>
+          <a href="mailto:bandzrenovations@gmail.com?" style={{color:'rgba(247, 248, 247, 1)',fontWeight:'600',fontSize:'1.25em'}}>Contact</a>
         </button>
       </div>
     </div>
