@@ -23,7 +23,7 @@ export const AboutPageTemplate = ({ title, description,avatar}) => {
         }}>
                 {title}
               </h2>
-              {avatar?
+              {/* {avatar?
                  avatar.map((data)=>{
                 let photo ={
                   src: data.image.childImageSharp.fluid.src,
@@ -39,7 +39,7 @@ export const AboutPageTemplate = ({ title, description,avatar}) => {
                     </div>
                   )
               }):
-              <div></div>}
+              <div></div>} */}
               {/* <PageContent style={{color:'rgba(254, 247, 230, 0.87)'}} content={content} /> */}
               <h6>{description}</h6>
             </div>
@@ -67,13 +67,22 @@ const AboutPage = ({ data }) => {
         
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        avatar={post.frontmatter.avatar}
+        // avatar={post.frontmatter.avatar||[]}
         // content={post.html}
       />
     </Layout>
   )
 }
-
+// avatar {
+//   image {
+//     childImageSharp {
+//       fluid(maxWidth: 2048, quality: 100) {
+//         ...GatsbyImageSharpFluid
+//       }
+//     }
+// }
+// text
+// }
 AboutPage.propTypes = {
   data: PropTypes.object.isRequired,
 }
@@ -87,16 +96,6 @@ export const aboutPageQuery = graphql`
       frontmatter {
         title
         description
-        avatar {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 2048, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        text
-        }
       }
     }
   }

@@ -97,7 +97,7 @@ export const IndexPageTemplate = ({
                   </div>
                 </div>*/}
                 {/* {console.log(heading)} */}
-                <Features gridItems={intro} heading={heading} description={description}available={available} askingPrice={askingPrice}/>
+                <Features gridItems={intro}  heading={heading} description={description}available={available} askingPrice={askingPrice}/>
                 {/* <div className="columns">
                   <div className="column is-11 has-text-centered"> */}
                     {/* <Link className="btn" to="/blog">
@@ -131,7 +131,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   askingPrice: PropTypes.string,
   available: PropTypes.string,
-  heading: PropTypes.string,
+  // heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
@@ -197,10 +197,11 @@ export const pageQuery = graphql`
           }
         }
         available
-        heading
+        
         asking_price
         description
         intro {
+          heading
           blurbs {
             image {
               childImageSharp {
@@ -211,7 +212,7 @@ export const pageQuery = graphql`
             }
             text
           }
-          heading
+          
           description
         }
       }

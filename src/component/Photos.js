@@ -12,7 +12,7 @@ class Photos extends React.Component{
         }
     }
     componentDidMount(){
-        // console.log(this.props)
+        console.log(this.props)
         let pics=this.props
         // if(this.state.pics===''){
             // let featureDefault= {
@@ -25,8 +25,8 @@ class Photos extends React.Component{
                 })
         // }
 
-        console.log(pics)
-        console.log(this.state)
+        // console.log(pics)
+        // console.log(this.state)
         // this.setState({
         //     pics:pics.gridItems,
         //     feature:featureDefault
@@ -109,8 +109,8 @@ class Photos extends React.Component{
            <h5 style={{color:'#eb4034', marginBottom:'.5em'}}>{this.props.heading}</h5> 
            <h6 style={{marginBottom:'.5em'}}>Available:{this.props.available}</h6><h6>Asking Price:{this.props.askingPrice}</h6><h6>{this.props.description}</h6>
         </div>
-           <div className='row' style={{ height: '50vh', overflow: 'auto', margin:'0px', border: 'solid 1px #fff'}}>
-           {this.state.pics.length>0?
+           <div className='row' style={{ height: '40vh', overflow: 'auto', margin:'0px', border: 'solid 1px #fff'}}>
+           {this.state.pics?
            
           this.state.pics.map(item=>{
             let text=item.text  

@@ -1,7 +1,7 @@
 import React from 'react'
 import { navigate } from 'gatsby-link'
 import Layout from '../../component/Layout'
-import ReactContactForm from 'react-mail-form';
+// import ReactContactForm from 'react-mail-form';
 
 function encode(data) {
   return Object.keys(data)
