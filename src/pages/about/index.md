@@ -10,6 +10,10 @@ description: >-
   If you or someone you know is interested in one of our listings, please
   contact Bob Deal or Zach Moss at bandzrenovations@gmail.com for more
   information.
-avatar: []
+avatar:
+  - image: /img/screenshot_20190927-104759_chrome.jpg
+    text: |-
+      Bob: 434-660-6920
+      Zach: 434-610-2217
 ---
 
